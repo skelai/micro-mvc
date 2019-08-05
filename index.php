@@ -41,7 +41,7 @@ spl_autoload_register('autoloadClass');
  */
 
 
-switch ($_GET['model']) {
+switch ($_GET['model']) { // an error here ?
     case 'subscriber':
         # code...
         break;
