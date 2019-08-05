@@ -14,25 +14,25 @@
 <body>
     <div class="container">
     <div class="text-center m-2">
-        <a href="index.php?model=book&method=create" type="button" class="btn btn-success">Add a book</a>
-        <a href="index.php?model=subscriber&method=create" type="button" class="btn btn-success">Add a subscriber</a>
-        <a href="index.php?model=subscriber_book&method=create" type="button" class="btn btn-success">Add a borrowing</a>
-    </div>
+    <a href="index.php?model=book&method=create" type="button" class="btn btn-success">Add a book</a>
+    <a href="index.php?model=subscriber&method=create" type="button" class="btn btn-success">Add a subscriber</a>
+    <a href="index.php?model=subscriber_book&method=create" type="button" class="btn btn-success">Add a borrowing</a>
+</div>
     <table class="table">
         <thead>
             <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
             <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($books as $book) : ?>
+            <?php foreach ($subscribers as $subscriber) : ?>
             <tr>
-                <td><?= $book['title'] ?></td>
-                <td><?= $book['author'] ?></td>
-                <td><a href="index.php?model=book&method=delete&id=<?= $book['id'] ?>"> Delete </a>
-                <a href="index.php?model=book&method=edit&id=<?= $book['id'] ?>"> Update </a>
+                <td><?= $subscriber['firstName'] ?></td>
+                <td><?= $subscriber['lastName'] ?></td>
+                <td><a href="index.php?model=subscriber&method=delete&id=<?= $subscriber['id'] ?>"> Delete </a>
+                <a href="index.php?model=subscriber&method=edit&id=<?= $subscriber['id'] ?>"> Update </a>
                 </td>
             </tr>
             <?php endforeach; ?>
